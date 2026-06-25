@@ -31,6 +31,11 @@ function handle(command) {
         "_blank",
       );
     }
+  }else if (command.includes("open youtube")) {
+    speak("opening youtube");
+
+    window.open("https://www.youtube.com/", "_blank");
+    
   }else if (command.includes("open facebook") || command.includes("ফেসবুক")) {
     speak("opening facebook");
     window.open("https://www.facebook.com/", "_blank");
