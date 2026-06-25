@@ -11,30 +11,33 @@ function speak(text) {
   utterance.lang = "en";
   window.speechSynthesis.speak(utterance);
 }
+function openAppOrWeb(appUrl,webUrl){
+const start = Date.now();
+  window.location.href = appUrl;
+
+  setTimeout(()=>{
+    if(Date.now() - start < 1600){
+      window.open(webUrl,"_blank");
+    }
+  },1200);
+}
+  
 function handle(command) {
   command = command.toLowerCase();
 
   if (command.includes("youtube search")) {
     let searchQuery = command.replace("search", "").trim();
     speak(`search youtube for ${searchQuery}`);
-
-    let appUrl = "youtube://www.youtube.com/search?q";
-    let webUrl = "https://www.youtube.com/search?q";
-    if (appUrl == true) {
-      window.open(
+      openAppOrWeb(
         `youtube://www.youtube.com/search?q=${encodeURIComponent(searchQuery)}`,
-        "_blank",
+         `https://www.youtube.com/search?q=${encodeURIComponent(searchQuery)}`
       );
-    } else {
-      window.open(
-        `https://www.youtube.com/search?q=${encodeURIComponent(searchQuery)}`,
-        "_blank",
-      );
-    }
+    } 
+       
   }else if (command.includes("open youtube")) {
     speak("opening youtube");
 
-    window.open("https://www.youtube.com/", "_blank");
+    openAppOrWeb("https://www.youtube.com/", "_blank");
     
   }else if (command.includes("open facebook") || command.includes("ফেসবুক")) {
     speak("opening facebook");
