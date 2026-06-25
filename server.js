@@ -14,10 +14,24 @@ function speak(text) {
 function handle(command) {
   command = command.toLowerCase();
 
-  if (command.includes("open youtube") || command.includes("ইউটিউব")) {
-    speak("opening youtube");
-    window.open("https://www.youtube.com/", "_blank");
-  } else if (command.includes("open facebook") || command.includes("ফেসবুক")) {
+  if (command.includes("youtube search")) {
+    let searchQuery = command.replace("search", "").trim();
+    speak(`search youtube for ${searchQuery}`);
+
+    let appUrl = "youtube://www.youtube.com/search?q";
+    let webUrl = "https://www.youtube.com/search?q";
+    if (appUrl == true) {
+      window.open(
+        `youtube://www.youtube.com/search?q=${encodeURIComponent(searchQuery)}`,
+        "_blank",
+      );
+    } else {
+      window.open(
+        `https://www.youtube.com/search?q=${encodeURIComponent(searchQuery)}`,
+        "_blank",
+      );
+    }
+  }else if (command.includes("open facebook") || command.includes("ফেসবুক")) {
     speak("opening facebook");
     window.open("https://www.facebook.com/", "_blank");
   } 
