@@ -4,7 +4,7 @@ const recognition = new (
 
 recognition.lang = "en";
 
-const btn = document.querySelector("#micBtn");
+const btn = document.querySelector(".wrapped");
 
 function speak(text) {
   const utterance = new SpeechSynthesisUtterance(text);
