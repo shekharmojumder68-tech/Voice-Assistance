@@ -3,14 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: rgb(45, 44, 44);
 }
 
-#navBar{
-margin: 10px;
-display: flex;
-justify-content: space-between;
+#navBar {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .signUp {
   color: #09d2e0;
@@ -20,12 +20,11 @@ justify-content: space-between;
   cursor: pointer;
   text-decoration: none;
 }
-.refresh{
-height: 40px;
-width: 40px;
-border-radius: 50%;
-background-color: azure;
-
+.refresh {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: azure;
 }
 
 .main {
@@ -105,15 +104,15 @@ background-color: azure;
 }
 
 @media (max-width: 768px) {
-  .navBar{
-    margin: 10px;
+  body {
+    display: grid;
+    height: 100%;
+    background-color: rgb(45, 44, 44);
   }
   .main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    flex-direction: column;
+    align-items: center;
     background-color: rgb(45, 44, 44);
   }
   .radius {
@@ -195,12 +194,15 @@ background-color: azure;
   }
 }
 @media (max-width: 640px) {
+  body {
+    display: grid;
+    height: 100%;
+    background-color: rgb(45, 44, 44);
+  }
   .main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    flex-direction: column;
+    align-items: center;
     background-color: rgb(45, 44, 44);
   }
   .radius {
@@ -281,12 +283,15 @@ background-color: azure;
   }
 }
 @media (max-width: 568px) {
+  body {
+    display: grid;
+    height: 100%;
+    background-color: rgb(45, 44, 44);
+  }
   .main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vw;
-    flex-direction: column;
+    align-items: center;
     background-color: rgb(45, 44, 44);
   }
   .radius {
