@@ -3,26 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* #choose {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: rgb(45, 44, 44);
-} */
-.btn {
-  color: #fff;
-}
-/* #choose button {
-  margin: 0 6vw;
-  color: white;
-  font-family: 900;
-  font-size: 30px;
-} */
-/* #choose button:active {
-  color: #09d2e0;
-  transform: scale(0.92);
-} */
 
 #navBar{
 margin: 10px;
