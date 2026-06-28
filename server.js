@@ -26,8 +26,8 @@ function openAppOrWeb(appUrl, webUrl) {
 function handle(command) {
   command = command.toLowerCase();
 
-if (command.includes("youtube search")) {
-    let searchQuery = command.replace("search", "").trim();
+if (command.includes("search in youtube")) {
+    let searchQuery = command.replace("search in youtube", "").trim();
     speak(`search youtube for ${searchQuery}`);
 
     openAppOrWeb(
