@@ -84,7 +84,3 @@ body {
 #submit:active {
   transform: scale(0.95);
 }
-
-#submit:focus {
-  outline: 3px solid #80bdff;
-}
