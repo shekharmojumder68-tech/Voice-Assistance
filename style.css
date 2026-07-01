@@ -67,6 +67,7 @@ body {
   background-color: rgb(246, 240, 240);
   border-radius: 50%;
   animation: inhe 0.7s linear infinite;
+  cursor: pointer;
 }
 
 .wrapped {
